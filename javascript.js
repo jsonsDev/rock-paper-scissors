@@ -1,5 +1,4 @@
 // Computer will return "rock", "paper", "scissors"
-
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3); // Return 3 random numbers    
     // Assign "rock", "paper", or "scissors"
@@ -11,8 +10,13 @@ function getComputerChoice() {
         return "Scissors";
     }
 }
-   
-// Prompt user for choice 
+
+// Prompt user for choice
+function getHumanChoice() {
+    let humanChoice = prompt("Rock, Paper, or Scissors? Shoot!");
+    return humanChoice;
+}
+
 // Create two variables to track human and computer scores
 // Track scores for each round
     // Take human and computer choice as arguments
