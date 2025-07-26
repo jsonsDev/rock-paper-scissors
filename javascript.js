@@ -18,6 +18,9 @@ function getHumanChoice() {
 }
 
 // Create two variables to track human and computer scores
+let humanScore = 0;
+let computerScore = 0;
+
 // Track scores for each round
     // Take human and computer choice as arguments
     // Increment round winner's score
