@@ -19,15 +19,8 @@ playerBtns.forEach(button => {
     });
 });
 
-document.addEventListener("click", e => {
-    if (e.target.matches(".rock")) {
-        console.log("rock");
-    } else if (e.target.matches(".paper")) {
-        console.log("paper");
-    } else if (e.target.matches(".scissors")) {
-        console.log("scissors");
-    }
-});
+const humanSelection = document.querySelectorAll("button");
+const computerSelection = getComputerChoice();
 
 let humanScore = 0;
 let computerScore = 0;
@@ -63,9 +56,6 @@ let computerScore = 0;
             document.querySelector(".scoreboard-header").textContent = "It's a tie!";
         }
     };
-
-    const humanSelection = document.querySelectorAll("button");
-    const computerSelection = getComputerChoice();
     
     playRound(humanSelection, computerSelection);
 
@@ -74,7 +64,3 @@ let computerScore = 0;
 // for (i = 0; i < 5; i++) {
 // playGame();
 // }
-
-    
-
-    
