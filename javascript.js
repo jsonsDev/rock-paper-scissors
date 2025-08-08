@@ -41,7 +41,7 @@ let computerScore = 0;
             ++humanScore;
             document.querySelector(".human-score").textContent = `Your score: ${humanScore}`;
         } else if (humanChoice == "paper" && computerChoice == "scissors") {
-            document.querySelector(".scoreboard-header").textContent = "Computer wins! Scissors beats paper!";
+            document.querySelector(".scoreboard-header").textContent = "You lose! Scissors beats paper!";
             ++computerScore;
             document.querySelector(".computer-score").textContent = `Computer score: ${computerScore}`;
         } else if (humanChoice == "scissors" && computerChoice == "paper") {
@@ -49,7 +49,7 @@ let computerScore = 0;
             ++humanScore;
             document.querySelector(".human-score").textContent = `Your score: ${humanScore}`;
         } else if (humanChoice == "scissors" && computerChoice == "rock") {
-            document.querySelector(".scoreboard-header").textContent = "Computer wins! Rock beats scissors!";
+            document.querySelector(".scoreboard-header").textContent = "You lose! Rock beats scissors!";
             ++computerScore;
             document.querySelector(".computer-score").textContent = `Computer score: ${computerScore}`;
         } else if (humanChoice === computerChoice) {
