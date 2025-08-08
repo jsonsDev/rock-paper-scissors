@@ -31,28 +31,50 @@ let computerScore = 0;
         if (humanChoice == "rock" && computerChoice == "paper") {
             document.querySelector(".scoreboard-header").textContent = "You lose! Paper beats rock!";
             ++computerScore;
+            document.querySelector(".human-display").textContent = "🪨";
+            document.querySelector(".computer-display").textContent = "📄";
             document.querySelector(".computer-score").textContent = `Computer score: ${computerScore}`;
         } else if (humanChoice == "rock" && computerChoice == "scissors") {
             document.querySelector(".scoreboard-header").textContent = "You win! Rock beats scissors!";
             ++humanScore;
+            document.querySelector(".human-display").textContent = "🪨";
+            document.querySelector(".computer-display").textContent = "✂️";            
             document.querySelector(".human-score").textContent = `Your score: ${humanScore}`;
         } else if (humanChoice == "paper" && computerChoice == "rock") {
             document.querySelector(".scoreboard-header").textContent = "You win! Paper beats rock!";
             ++humanScore;
+            document.querySelector(".human-display").textContent = "📄";
+            document.querySelector(".computer-display").textContent = "🪨";
             document.querySelector(".human-score").textContent = `Your score: ${humanScore}`;
         } else if (humanChoice == "paper" && computerChoice == "scissors") {
             document.querySelector(".scoreboard-header").textContent = "You lose! Scissors beats paper!";
             ++computerScore;
+            document.querySelector(".human-display").textContent = "📄";
+            document.querySelector(".computer-display").textContent = "✂️";
             document.querySelector(".computer-score").textContent = `Computer score: ${computerScore}`;
         } else if (humanChoice == "scissors" && computerChoice == "paper") {
             document.querySelector(".scoreboard-header").textContent = "You win! Scissors beats paper!";
             ++humanScore;
+            document.querySelector(".human-display").textContent = "✂️";
+            document.querySelector(".computer-display").textContent = "📄";
             document.querySelector(".human-score").textContent = `Your score: ${humanScore}`;
         } else if (humanChoice == "scissors" && computerChoice == "rock") {
             document.querySelector(".scoreboard-header").textContent = "You lose! Rock beats scissors!";
             ++computerScore;
+            document.querySelector(".human-display").textContent = "✂️";
+            document.querySelector(".computer-display").textContent = "🪨";
             document.querySelector(".computer-score").textContent = `Computer score: ${computerScore}`;
         } else if (humanChoice === computerChoice) {
+                if (humanChoice == "rock") {
+                    document.querySelector(".human-display").textContent = "🪨";
+                    document.querySelector(".computer-display").textContent = "🪨";
+                } else if (humanChoice == "paper") {
+                    document.querySelector(".human-display").textContent = "📄";
+                    document.querySelector(".computer-display").textContent = "📄";
+                } else {
+                    document.querySelector(".human-display").textContent = "✂️";
+                    document.querySelector(".computer-display").textContent = "✂️";
+                }
             document.querySelector(".scoreboard-header").textContent = "It's a tie!";
         }
     };
