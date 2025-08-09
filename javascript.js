@@ -26,8 +26,8 @@ let humanScore = 0;
 let computerScore = 0;
 
 function resetGame() {
-    let humanScore = 0;
-    let computerScore = 0;
+    humanScore = 0;
+    computerScore = 0;
     document.querySelector(".human-score").textContent = `Your score: ${humanScore}`;
     document.querySelector(".computer-score").textContent = `Computer score: ${computerScore}`;
     document.querySelector(".human-display").textContent = "🙂";
@@ -85,10 +85,10 @@ function playRound(humanChoice, computerChoice) {
         document.querySelector(".scoreboard-header").textContent = "It's a tie!";
     };
 
-    if (humanScore === 5) {
+    if (humanScore === 6) {
         gameWinner = alert("You won the game!");
         resetGame();
-    } else if (computerScore === 5) {
+    } else if (computerScore === 6) {
         gameWinner = alert("Computer won the game. Better luck next time!");
         resetGame();
     };
