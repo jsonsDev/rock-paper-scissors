@@ -90,7 +90,7 @@ function playRound(humanChoice, computerChoice) {
         resetGame();
     } else if (computerScore === 5) {
         gameWinner = alert("Computer won the game. Better luck next time!");
-        resetGame;
+        resetGame();
     };
 };
 playRound(humanSelection, computerSelection);
